@@ -64,7 +64,7 @@ public class BaseTest extends BaseClass {
 
         driver.findElement(backOrMenu).click();
 
-        deleteNote();
+        deleteCategory();
 
         driver.findElement(archiveButton).click();
 
@@ -77,7 +77,7 @@ public class BaseTest extends BaseClass {
         driver.quit();
     }
 
-    private void deleteNote() {
+    private void deleteCategory() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(archiveButton));
 
         touchActions1.longPress(LongPressOptions.longPressOptions()
