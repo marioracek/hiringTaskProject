@@ -45,7 +45,9 @@ public class BaseTest extends BaseClass {
 
     @BeforeClass
     public static void setUp() throws MalformedURLException {
-        driver = capabilities();
+        //use emulator if app you are using emulator, else use real if you are using real device
+        //use true, if app is installed on device, else use false if you want to install it
+        driver = capabilities("emulator", false);
     }
 
     @Test
